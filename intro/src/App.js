@@ -1,12 +1,12 @@
 import "./App.css"
-import { Component } from "./components/component"
+import { Blog } from "./components/Blog"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Component></Component>
-      </header>
+    <div>
+      <Blog />
+      <Blog />
+      <Blog />
     </div>
   )
 }
