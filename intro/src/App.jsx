@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <Blog />
+      <Blog title="Soy un titulo" />
       <button onClick={handleClick}>Click me</button>
       <input type="text" onChange={handleChange} name="test" id="" />
     </div>
