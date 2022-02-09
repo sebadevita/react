@@ -7,14 +7,12 @@ import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<App />} />
-        <Route exact path="/carousel" element={<Carousel />}></Route>
-      </Routes>
-    </Router>
-  </React.StrictMode>,
+  <Router>
+    <Routes>
+      <Route exact path="/" element={<App />} />
+      <Route path="/carousel/:site" element={<Carousel />}></Route>
+    </Routes>
+  </Router>,
   document.getElementById("root")
 )
 
