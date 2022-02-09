@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-import "./App.css"
-
+import { Link } from "react-router-dom"
 function App() {
   const [user, setUser] = useState({})
   useEffect(() => {
@@ -10,13 +9,13 @@ function App() {
   const fetchData = async () => {
     const getData = await fetch("https://api.github.com/users/sebadevita")
     const dataToJson = await getData.json()
-    console.log(dataToJson)
     setUser(dataToJson)
   }
 
   return (
     <div>
       <p>Mi nombre es: {user.name}</p>
+      <Link to="/equipo"> Ir a la página de equipo</Link>
     </div>
   )
 }
