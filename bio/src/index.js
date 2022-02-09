@@ -5,12 +5,14 @@ import App from "./pages/App"
 import Team from "./pages/Team"
 import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Member from "./pages/Member"
 
 ReactDOM.render(
   <Router>
     <Routes>
       <Route exact path="/" element={<App />} />
-      <Route path="/equipo" element={<Team />} />
+      <Route exact path="/equipo" element={<Team />} />
+      <Route exact path="/member/:id" element={<Member />} />
     </Routes>
   </Router>,
   document.getElementById("root")
