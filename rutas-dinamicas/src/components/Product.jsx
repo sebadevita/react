@@ -3,13 +3,13 @@ import "./Product.css"
 
 const Product = ({ product }) => {
   return (
-    <div className="product-card">
+    <div className="card-container">
       <div className="image-container">
         <img className="product-image" src={product.thumbnail} alt="" />
       </div>
       <div className="product-detail">
-        <p>${product.price}</p>
-        <p>{product.title}</p>
+        <p className="price">${product.price}</p>
+        <p className="title">{product.title}</p>
       </div>
     </div>
   )

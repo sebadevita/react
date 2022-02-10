@@ -6,7 +6,7 @@ const Country = ({ country }) => {
   return (
     <div className="country-container">
       <img className="flag" src={country.flag} alt="" />
-      <Link to={`/carousel/${country.code}`}>
+      <Link className="link" to={`/carousel/${country.code}`}>
         <p>{country.name}</p>
         <p>{country.id}</p>
       </Link>
