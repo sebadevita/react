@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Product from "./Product"
+import "./Carousel.css"
 
 const Carousel = () => {
   const { site } = useParams()
@@ -16,11 +17,12 @@ const Carousel = () => {
     )
     const dataToJson = await getData.json()
     const resultsCopy = [...dataToJson.results]
+    console.log(resultsCopy[0])
     setProducts(resultsCopy.slice(0, 5))
   }
 
   return (
-    <div>
+    <div className="carousel-container">
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}

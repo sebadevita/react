@@ -1,0 +1,8 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "nunito";
+  background-color: #ebebeb;
+}
