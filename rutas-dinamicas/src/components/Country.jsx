@@ -8,6 +8,7 @@ const Country = ({ country }) => {
       <img className="flag" src={country.flag} alt="" />
       <Link to={`/carousel/${country.code}`}>
         <p>{country.name}</p>
+        <p>{country.id}</p>
       </Link>
     </div>
   )

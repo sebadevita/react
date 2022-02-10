@@ -16,17 +16,14 @@ const Carousel = () => {
     )
     const dataToJson = await getData.json()
     const resultsCopy = [...dataToJson.results]
-    setProducts(resultsCopy)
+    setProducts(resultsCopy.slice(0, 5))
   }
 
   return (
     <div>
-      {console.log(products)}
-      {/* {products.map((product) => (
-        <div>
-          <Product key={product.id} country={product} />
-        </div>
-      ))} */}
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
     </div>
   )
 }
