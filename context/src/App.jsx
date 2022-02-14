@@ -10,8 +10,17 @@ function App() {
     setTheme("dark")
   }
 
+  const handleCallback = () => {
+    setTheme("light")
+  }
+
+  const themeValue = {
+    theme: theme,
+    handleCallback: handleCallback,
+  }
+
   return (
-    <ThemeProvider value={theme}>
+    <ThemeProvider value={themeValue}>
       <div className="App"></div>
       <p>En App el valor del theme es: {theme}</p>
       <button onClick={handleClick}>Cambiar tema</button>
